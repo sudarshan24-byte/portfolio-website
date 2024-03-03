@@ -57,7 +57,7 @@ export const Web_projects = [
         title: 'Portfolio Website',
         techStack: 'ReactJS | Tailwind CSS | Framer-Motion',
         imageUrl: projectsImg.portfolio,
-        href: 'https://github.com/sudarshan24-byte/Vehicle-Number-Plate-Detection',
+        href: 'https://github.com/sudarshan24-byte/portfolio-website',
         type: 'Portfolio Website'
     },
 ]
