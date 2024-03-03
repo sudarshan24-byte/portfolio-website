@@ -1,0 +1,8 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#4682B4"/>
+  <!-- Letter S -->
+  <text x="55" y="120" font-family="Arial" font-size="60" fill="#00FFFF">S</text>
+  <!-- Letter T -->
+  <text x="115" y="120" font-family="Arial" font-size="60" fill="#000000">T</text>
+</svg>
