@@ -17,7 +17,7 @@ export default function Sidebar() {
                         <Card key={data.id}
                             title={data.title}
                             techstack={data.techStack}
-                            url={data.url}
+                            url={data.href}
                         />
                     ))}
                 </div>

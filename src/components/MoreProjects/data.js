@@ -19,6 +19,12 @@ export const moreprojects = [
         href: 'https://www.kaggle.com/code/sudarshan24byte/ms-dhoni-odi-batting-analysis',
     },
     {
+        id: 7,
+        title: 'Heart Health Prediction',
+        techStack: 'Machine Learning | EDA | Seaborn',
+        href: 'https://www.kaggle.com/code/sudarshan24byte/heart-health-prediction',
+    },
+    {
         id: 4,
         title: 'Django CRUD Application',
         techStack: 'Python | Django | Bootstrap',

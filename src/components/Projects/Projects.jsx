@@ -16,18 +16,24 @@ const Projects = () => {
                 {/* flex flex-col md:flex-row justify-evenly items-end */}
                 <button
                     onClick={() => handleSectionChange('ML')}
-                    className={`mr-4 ${activeSection === 'ML' ? 'font-bold text-highlight' : ''}`}
+                    className={`mr-4 ${activeSection === 'ML' ?
+                        'font-bold bg-highlight px-2 py-1 rounded-lg' :
+                        'text-white/55'}`}
                 >
                     Machine Learning
                 </button>
                 <button
                     onClick={() => handleSectionChange('Web')}
-                    className={`mr-4 ${activeSection === 'Web' ? 'font-bold text-highlight' : ''}`}
+                    className={`mr-4 ${activeSection === 'Web' ?
+                        'font-bold bg-highlight px-2 py-1 rounded-lg' :
+                        'text-white/55'}`}
                 >
                     Web Development
                 </button>
 
             </div>
+
+            <div></div>
 
             {/* Content */}
             <div className='p-4 mt-4'>

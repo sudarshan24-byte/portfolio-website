@@ -3,17 +3,22 @@ import Cards from '../Cards'
 
 const WebDev = ({ data }) => {
     return (
-        <div className='flex flex-wrap justify-between items-center gap-2'>
-            {data.map((data) => (
-                <Cards
-                    key={data.id}
-                    title={data.title}
-                    image={data.imageUrl}
-                    techstack={data.techStack}
-                    url={data.href}
-                    type={data.type}
-                />
-            ))}
+        <div>
+            <div className='flex flex-wrap justify-around items-end gap-2'>
+                {data.map((data) => (
+                    <Cards
+                        key={data.id}
+                        title={data.title}
+                        image={data.imageUrl}
+                        techstack={data.techStack}
+                        githubhref={data.githubhref}
+                        kagglehref={data.kagglehref}
+                        type={data.type}
+                        github={data.github}
+                        kaggle={data.kaggle}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

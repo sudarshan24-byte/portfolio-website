@@ -5,7 +5,7 @@ export const skill = [
     {
         id: 1,
         title: 'Machine Learning',
-        img: skillimg.mlimg
+        img: skillimg.ml
     },
     {
         id: 2,
@@ -16,5 +16,5 @@ export const skill = [
         id: 3,
         title: 'Deep Learning',
         img: skillimg.dl
-    }
+    },
 ]

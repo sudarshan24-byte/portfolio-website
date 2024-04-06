@@ -6,9 +6,9 @@ import Card from './Card';
 // Icon Import
 import { FaPython, FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
-import { SiNumpy, SiPandas, SiTensorflow, SiOpencv, SiJupyter, SiScikitlearn, SiPlotly, SiAlwaysdata, SiDjango, SiMongodb, SiExpress } from "react-icons/si";
+import { SiNumpy, SiPytorch, SiRedux, SiPandas, SiTensorflow, SiOpencv, SiPostgresql, SiJupyter, SiAppwrite, SiKeras, SiScikitlearn, SiPlotly, SiAlwaysdata, SiDjango, SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 import { BsClipboard2DataFill } from "react-icons/bs";
-import { TbApi } from "react-icons/tb";
+import { TbApi, TbBrandFramerMotion } from "react-icons/tb";
 
 const Skills = () => {
     return (
@@ -33,6 +33,8 @@ const Skills = () => {
                     <Card skill='Plotly' color='' bordercolor='border-emerald-400' icon={<SiPlotly />} iconcolor='text-emerald-500' />
                     <Card skill='Scikit-Learn' color='' bordercolor='border-fuchsia-400' icon={<SiScikitlearn />} iconcolor='text-fuchsia-500' />
                     <Card skill='TensorFlow' color='text-orange-500' bordercolor='' icon={<SiTensorflow />} iconcolor='text-orange-500' />
+                    <Card skill='Pytorch' color='text-red-500' bordercolor='' icon={<SiPytorch />} iconcolor='text-red-500' />
+                    <Card skill='Keras' color='text-red-600' bordercolor='' icon={<SiKeras />} iconcolor='text-red-600' />
                     <Card skill='OpenCV' color='text-green-500' bordercolor='' icon={<SiOpencv />} iconcolor='text-red-500' />
                     <Card skill='Jupyter Notebook' color='text-[#FFFFEC]' bordercolor='border-red-400/45' icon={<SiJupyter />} iconcolor='text-yellow-500' />
                 </div>
@@ -44,11 +46,15 @@ const Skills = () => {
                 <div className='flex flex-wrap justify-center items-center gap-5'>
                     <Card skill='HTML5' color='yellow' bordercolor='border-orange-400' icon={<FaHtml5 />} iconcolor='text-orange-500' />
                     <Card skill='CSS3' color='yellow' bordercolor='' icon={<FaCss3Alt />} iconcolor='text-sky-500' />
-                    <Card skill='ReactJS' color='yellow' bordercolor='border-blue-400' icon={<FaReact />} iconcolor='text-blue-500' />
-                    <Card skill='Tailwind CSS' color='yellow' bordercolor='border-sky-500' icon={<FaPython />} iconcolor='text-cyan-400' />
+                    <Card skill='ReactJS' color='yellow' bordercolor='border-blue-500' icon={<FaReact />} iconcolor='text-blue-500' />
+                    <Card skill='Tailwind CSS' color='yellow' bordercolor='border-sky-500' icon={<SiTailwindcss />} iconcolor='text-cyan-400' />
+                    <Card skill='Framer Motion' color='yellow' bordercolor='' icon={<TbBrandFramerMotion />} iconcolor='text-highlight' />
                     <Card skill='Django' color='yellow' bordercolor='border-green-400' icon={<SiDjango />} iconcolor='text-green-500' />
                     <Card skill='ExpressJS' color='yellow' bordercolor='' icon={<SiExpress />} iconcolor='text-yellow-500' />
-                    <Card skill='RESTful APIs' color='yellow' bordercolor='' icon={<TbApi />} iconcolor='text-indigo-500' />
+                    <Card skill='RESTful APIs' color='yellow' bordercolor='' icon={<TbApi />} iconcolor='text-violet-500' />
+                    <Card skill='Appwrite' color='yellow' bordercolor='' icon={<SiAppwrite />} iconcolor='text-pink-800' />
+                    {/* <Card skill='PostgreSQL' color='yellow' bordercolor='' icon={<SiPostgresql />} iconcolor='text-indigo-500' /> */}
+                    <Card skill='Redux' color='yellow' bordercolor='' icon={<SiRedux />} iconcolor='text-purple-500' />
                     <Card skill='MongoDB' color='yellow' bordercolor='' icon={<SiMongodb />} iconcolor='text-emerald-400' />
                 </div>
             </div>
