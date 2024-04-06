@@ -23,7 +23,7 @@ https://sudarshan24-byte.netlify.app/
 ## Clone the Project
 
 ```bash
-  git clone https://github.com/sudarshan24-byte/Vehicle-Number-Plate-Detection-Model.git
+  git clone https://github.com/sudarshan24-byte/portfolio-website.git
 ```
 
 
