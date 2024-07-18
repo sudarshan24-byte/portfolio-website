@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import Cards from '../Cards'
 import { Client, ID, Databases } from 'appwrite';
-import config from '../../appwrite/config';
-import Loading from '../Loading';
+import React, { useState, useEffect } from 'react'
+import config from '../appwrite/config';
+import Cards from './Cards';
+import Loading from './Loading';
+import Heading from './Heading'
 
-const MachineLearning = () => {
+const Demo = () => {
     const [data, setData] = useState([])
     const client = new Client()
         .setEndpoint(config.appwriteUrl)
@@ -36,7 +37,7 @@ const MachineLearning = () => {
                     config.appwriteCollectionIdML,
                     []
                 );
-                // console.log(response);
+                console.log(response);
                 setData(response.documents.map(item => ({
                     ...item,
                     img: generateThumbnailUrl(extractDriveId(item.img))
@@ -48,10 +49,13 @@ const MachineLearning = () => {
 
         fetchData();
     }, []);
-    // console.log(data)
+    console.log(data);
+
+
     return (
-        <div>
-            {data.length == 0 && <Loading />}
+        <div className='p-4'>
+            <Heading title={'My Experience'} />
+            {/* {data.length == 0 && <Loading />}
             <div className='flex flex-wrap justify-around items-end gap-2'>
                 {data.map((data, i) => (
                     <Cards
@@ -62,16 +66,15 @@ const MachineLearning = () => {
                         github={data.github} kaggle={data.kaggle}
                         githubhref={data.githubUrl}
                         kagglehref={data.kaggleUrl}
-                        tag={data.tag}
+                        type={data.tag}
                         imgUrl={data.imgUrl}
-                        website={data.website}
-                        link={data.$id}
-                        type={'ml'}
                     />
                 ))}
-            </div>
+            </div> */}
+
+
         </div>
     )
 }
 
-export default MachineLearning
+export default Demo

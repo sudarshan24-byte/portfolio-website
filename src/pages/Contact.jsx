@@ -5,6 +5,7 @@ import Heading from '../components/Heading';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import SuccessTooltip from '../components/SuccessTooltip';
+import SuccessAlert from '../components/SuccessAlert';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -12,6 +13,7 @@ const Contact = () => {
     const [message, setMessage] = useState('');
     const [subject, setSubject] = useState('');
     const [success, setSuccess] = useState(false)
+    const [empty, setEmpty] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -28,6 +30,11 @@ const Contact = () => {
             message: message,
         };
 
+        if (name == false || email == false || subject == false || message == false) {
+            setEmpty(true)
+            return alert('Please fill all the fields!')
+        }
+
         emailjs.send(serviceId, templateId, templateParams, publicKey)
             .then((response) => {
                 console.log('Email sent successfully!', response);
@@ -42,14 +49,19 @@ const Contact = () => {
         setSuccess(true)
         setTimeout(() => {
             setSuccess(false);
+            setEmpty(false)
         }, 10000);
     }
+
+    const handleAlertClose = () => {
+        setSuccess(false);
+    };
+
     return (
         <>
-            {success ?
-                <SuccessTooltip />
-                :
-                null}
+            <SuccessAlert visible={success} onClose={handleAlertClose} color={'green'}
+                message={'Your message has been sent! Thank You for contacting me. Will surely reach out to you. In the meantime, feel free to explore my portfolio.'} />
+
             <div className='bg-secondary text-white h-screen'>
                 {/* <Heading title={'Contact Me'} /> */}
                 <div className=' h-40 flex justify-center items-center'>
@@ -75,7 +87,7 @@ const Contact = () => {
                             </div>
 
                             <div className='flex justify-between items-center my-2'>
-                                <input type="submit" value='Submit' id="submit" className='bg-highlight px-4 py-1 rounded-lg text-white' />
+                                <input type="submit" value='Submit' id="submit" className='bg-highlight px-4 py-1 rounded-lg text-white cursor-pointer' />
                                 <Link to='/' className='bg-[#323a96] px-4 py-1 rounded-lg text-white'>Home</Link>
                             </div>
                         </div>

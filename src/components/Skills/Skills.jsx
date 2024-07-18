@@ -6,7 +6,7 @@ import Card from './Card';
 // Icon Import
 import { FaPython, FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
-import { SiNumpy, SiPytorch, SiRedux, SiPandas, SiTensorflow, SiOpencv, SiPostgresql, SiJupyter, SiAppwrite, SiKeras, SiScikitlearn, SiPlotly, SiAlwaysdata, SiDjango, SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
+import { SiNumpy, SiFastapi, SiPytorch, SiRedux, SiPandas, SiTensorflow, SiOpencv, SiPostgresql, SiJupyter, SiAppwrite, SiKeras, SiScikitlearn, SiPlotly, SiAlwaysdata, SiDjango, SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 import { BsClipboard2DataFill } from "react-icons/bs";
 import { TbApi, TbBrandFramerMotion } from "react-icons/tb";
 
@@ -41,7 +41,7 @@ const Skills = () => {
             </div>
 
             {/* Web Development */}
-            <div className='bg-primary max-w-96 px-5 py-3 text-center rounded-md'>
+            <div className='bg-primary max-w-96 px-5 py-3 text-center rounded-md text-'>
                 <Title title='Web Development' />
                 <div className='flex flex-wrap justify-center items-center gap-5'>
                     <Card skill='HTML5' color='yellow' bordercolor='border-orange-400' icon={<FaHtml5 />} iconcolor='text-orange-500' />
@@ -49,7 +49,8 @@ const Skills = () => {
                     <Card skill='ReactJS' color='yellow' bordercolor='border-blue-500' icon={<FaReact />} iconcolor='text-blue-500' />
                     <Card skill='Tailwind CSS' color='yellow' bordercolor='border-sky-500' icon={<SiTailwindcss />} iconcolor='text-cyan-400' />
                     <Card skill='Framer Motion' color='yellow' bordercolor='' icon={<TbBrandFramerMotion />} iconcolor='text-highlight' />
-                    <Card skill='Django' color='yellow' bordercolor='border-green-400' icon={<SiDjango />} iconcolor='text-green-500' />
+                    <Card skill='Django' color='yellow' bordercolor='' icon={<SiDjango />} iconcolor='text-emerald-400' />
+                    <Card skill='FastAPI' color='yellow' bordercolor='border-green-600' icon={<SiFastapi />} iconcolor='text-green-600' />
                     <Card skill='ExpressJS' color='yellow' bordercolor='' icon={<SiExpress />} iconcolor='text-yellow-500' />
                     <Card skill='RESTful APIs' color='yellow' bordercolor='' icon={<TbApi />} iconcolor='text-violet-500' />
                     <Card skill='Appwrite' color='yellow' bordercolor='' icon={<SiAppwrite />} iconcolor='text-pink-800' />
