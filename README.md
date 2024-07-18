@@ -1,8 +1,60 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Portfolio Website
 
-Currently, two official plugins are available:
+My Portfolio Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Website Link
+
+https://sudarshan24-byte.netlify.app/
+
+## Technologies
+
+ - JavaScript
+ - ReactJS
+ - Tailwind CSS
+ - EmailJS
+
+## Screenshots
+
+![Screenshot 2024-04-06 112350](https://github.com/sudarshan24-byte/portfolio-website/assets/110741425/24838e1d-5321-41f1-b0c5-3a52c386a6ad)
+
+![Screenshot 2024-04-06 112420](https://github.com/sudarshan24-byte/portfolio-website/assets/110741425/2207cfbf-8780-4ecd-841c-b3dcf18413af)
+
+## Clone the Project
+
+```bash
+  git clone https://github.com/sudarshan24-byte/portfolio-website.git
+```
+
+
+## Run Locally
+
+## Install dependencies
+install with npm
+
+```bash
+  npm install
+
+```
+yarn install
+```bash
+  yarn install
+```
+
+Start the server
+
+
+```bash
+  npm run dev
+```
+
+
+## Profile
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/sudarshan24-byte)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sudarshan-trifaley/)
+
+
+## Authors
+
+- [@sudarshan24-byte](https://github.com/sudarshan24-byte)
