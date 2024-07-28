@@ -23,30 +23,6 @@ import { animate, useMotionValue, useTransform, motion } from 'framer-motion'
 import Problems from '../components/Projects/Problems'
 
 const Home = () => {
-    const [data, setData] = useState([])
-    const client = new Client()
-        .setEndpoint(config.appwriteUrl)
-        .setProject(config.appwriteProjectId);
-
-    const database = new Databases(client);
-    useEffect(() => {
-        const fetchBlog = async () => {
-            try {
-                let response = await database.listDocuments(
-                    config.appwriteDatabaseId,
-                    config.appwriteCollectionIdResume,
-                    []
-                );
-                setData(response.documents);
-            } catch (error) {
-                console.error('Error fetching blog:', error);
-            }
-        };
-
-        fetchBlog();
-    }, []);
-    // console.log(data);
-
     const handleDownload = () => {
         // const resumeUrl = data[0].resume;
         fetch('/ML-Resume.pdf')
