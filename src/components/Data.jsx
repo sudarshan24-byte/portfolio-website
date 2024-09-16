@@ -15,13 +15,11 @@ const Data = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let response = await database.listDocuments(
-                    config.appwriteDatabaseId,
-                    config.appwriteCollectionIdOtherProjects,
-                    []
-                );
+                let url = import.meta.env.VITE_PORFOLIO_URL
+                let response = await fetch(`${url}/api/otherprojects`)
+                let data = await response.json()
                 // console.log(response);
-                setData(response.documents) // Store the first document data in state
+                setData(data.data.reverse()) // Store the first document data in state
             } catch (error) {
                 console.log(error);
             }
@@ -35,8 +33,8 @@ const Data = () => {
             {data.length == 0 && <Loading />}
             {data.map((data, i) => (
                 <Card key={i}
-                    title={data.Title}
-                    techstack={data.techstack}
+                    title={data.title}
+                    techstack={data.techstack.join(' | ')}
                     url={data.link}
                 />
             ))}

@@ -14,12 +14,11 @@ const Experience = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let response = await database.listDocuments(
-                    config.appwriteDatabaseId,
-                    config.appwriteCollectionIdExperience,
-                    []
-                );
-                setData(response.documents) // Store the first document data in state
+                let url = import.meta.env.VITE_PORFOLIO_URL
+                let response = await fetch(`${url}/api/experience`)
+                let data = await response.json()
+                // console.log(response);
+                setData(data.data.reverse()) // Store the first document data in state
             } catch (error) {
                 console.log(error);
             }
@@ -29,7 +28,8 @@ const Experience = () => {
     }, []);
     // console.log(data);
     return (
-        <div className='flex flex-wrap justify-evenly items-baseline gap-4'>
+        <div
+            className={data.length > 2 ? 'flex flex-wrap justify-between items-baseline mx-10 gap-4' : 'flex flex-wrap justify-evenly items-baseline gap-4'}>
             {data.length == 0 && <Loading />}
             {data.map((data, i) => (
                 <ExperienceCard key={i}

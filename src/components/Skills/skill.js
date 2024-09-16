@@ -14,7 +14,7 @@ export const skill = [
     },
     {
         id: 3,
-        title: 'Deep Learning',
+        title: 'Full Stack Development',
         img: skillimg.dl
     },
 ]

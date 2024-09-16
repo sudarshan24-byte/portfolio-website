@@ -104,3 +104,7 @@ export const Web_projects = [
         kaggle: ''
     },
 ]
+
+// export const icons = {
+//     'contact': {<IoMdContact />}
+// }

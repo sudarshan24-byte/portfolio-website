@@ -11,6 +11,7 @@ import { skill } from '../components/Skills/skill';
 
 import { Client, ID, Databases } from 'appwrite';
 import config from '../appwrite/config'
+// import { icons } from '../assets/data'
 
 import { IoMdContact } from "react-icons/io";
 import { BsFillPersonVcardFill } from "react-icons/bs";
@@ -23,9 +24,10 @@ import { animate, useMotionValue, useTransform, motion } from 'framer-motion'
 import Problems from '../components/Projects/Problems'
 
 const Home = () => {
+    // const [projects, setProjects] = useState([])
     const handleDownload = () => {
         // const resumeUrl = data[0].resume;
-        fetch('/ML-Resume.pdf')
+        fetch('/SudarshanResume.pdf')
             .then(response => response.blob())
             .then(blob => {
                 const url = window.URL.createObjectURL(blob);
@@ -44,32 +46,6 @@ const Home = () => {
             .catch(error => console.error('Error fetching PDF file:', error));
     };
 
-    // const handleDownload = async () => {
-    //     try {
-    //         const response = await fetch(data.resume, {
-    //             method: 'GET',
-    //             headers: {
-    //                 'Content-Type': 'application/pdf'
-    //             }
-    //         });
-
-    //         if (!response.ok) {
-    //             throw new Error('Network response was not ok');
-    //         }
-
-    //         const blob = await response.blob();
-    //         const url = window.URL.createObjectURL(blob);
-    //         const a = document.createElement('a');
-    //         a.href = url;
-    //         a.download = 'resume.pdf';
-    //         document.body.appendChild(a);
-    //         a.click();
-    //         a.remove();
-    //         window.URL.revokeObjectURL(url);
-    //     } catch (error) {
-    //         console.error('Error downloading the file:', error);
-    //     }
-    // };
 
     return (
         <>
@@ -141,10 +117,10 @@ const Home = () => {
                     </div>
 
                     {/* DSA Problems */}
-                    <div className='p-4'>
+                    {/* <div className='p-4'>
                         <Heading title={'DSA Problems'} />
                         <Problems />
-                    </div>
+                    </div> */}
 
                     {/* My Interests */}
                     <div className='p-4'>
@@ -155,6 +131,8 @@ const Home = () => {
                             ))}
                         </div>
                     </div>
+
+                    {/* <Demo /> */}
                 </div>
             </div>
         </>

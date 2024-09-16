@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import Cards from '../Cards';
-import Loading from '../Loading';
+import React, { useEffect, useState } from 'react'
+import Dropdown from '../DropDown'
+import { Link } from 'react-router-dom'
 import Heading from '../Heading'
-import Dropdown from '../DropDown';
-import { Link } from 'react-router-dom';
-import { FaArrowRight } from "react-icons/fa6";
+import Loading from '../Loading'
+import Cards from '../Cards'
+import { FaArrowRight } from 'react-icons/fa'
 
-
-const Projects = () => {
+const AllProjects = () => {
     const [projects, setProjects] = useState([])
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [option, setOption] = useState('All')
@@ -34,23 +33,24 @@ const Projects = () => {
 
     useEffect(() => {
         if (option === 'All') {
-            setFilteredProjects(projects.slice(-6).reverse())
+            setFilteredProjects(projects.reverse())
         } else {
             // setFilteredProjects(projects.filter(project => project.sortby === option))
             const filtered = projects.filter(project => project.sortby === option);
-            setFilteredProjects(filtered.slice(-6).reverse());
+            setFilteredProjects(filtered.reverse());
         }
     }, [option, projects])
-
     return (
-        <div className='p-4'>
-            {/* <Heading title={'Demo'} /> */}
+        <div className='bg-secondary text-white p-4 min-h-screen'>
+            <Heading title={'All Projects'} />
             <div className='flex justify-evenly items-center mb-5'>
                 <Dropdown
                     setOption={setOption}
                 />
-                <Link to='/projects' className='ml-5'>
-                    <div className='text-highlight flex items-center justify-between w-[7.5rem] md:w-[10rem] font-bold text-sm md:text-lg'>See All Projects <FaArrowRight /></div>
+                <Link to='/' className='ml-5'>
+                    <div className='text-highlight flex items-center justify-between w-[7.5rem] md:w-[10rem] font-bold text-sm md:text-lg'>
+                        Back to Home <FaArrowRight />
+                    </div>
                 </Link>
             </div>
             {projects.length == 0 && <Loading />}
@@ -73,15 +73,13 @@ const Projects = () => {
                     />
                 ))}
             </div>
-            <div className='flex justify-end text-highlight'>
+            {/* <div className='flex justify-end text-highlight'>
                 <Link to='/projects'>
                     <div className='flex items-center justify-between w-[10rem] font-bold text-lg'>See All Projects <FaArrowRight /></div>
                 </Link>
-            </div>
-
-
+            </div> */}
         </div>
     )
 }
 
-export default Projects
+export default AllProjects
