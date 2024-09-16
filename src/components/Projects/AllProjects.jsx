@@ -33,7 +33,7 @@ const AllProjects = () => {
 
     useEffect(() => {
         if (option === 'All') {
-            setFilteredProjects(projects.reverse())
+            setFilteredProjects([...projects].reverse())
         } else {
             // setFilteredProjects(projects.filter(project => project.sortby === option))
             const filtered = projects.filter(project => project.sortby === option);
