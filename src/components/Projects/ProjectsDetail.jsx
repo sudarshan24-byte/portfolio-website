@@ -38,7 +38,13 @@ const ProjectsDetail = () => {
 
         fetchBlog();
     }, [id]);
-    console.log(project);
+    // console.log(project);
+
+    if (project.description) {
+        var description = project.description.includes('\n\n') ? project.description.split('\n\n') : [project.description]
+    }
+    // console.log(description);
+
 
     if (loading) {
         return <div className='bg-primary h-screen flex justify-center items-center'><Loading /></div>
@@ -49,7 +55,9 @@ const ProjectsDetail = () => {
                 <div className='bg-primary relative px-5 md:px-10 h-full pt-2 col-span-8'>
                     <h1 className='text-4xl md:text-5xl text-highlight'>{project.title}</h1>
                     <div className='bg-secondary w-fit rounded-md p-2 my-3 text-xs lg:text-sm'>{project.techstack.join(' | ')}</div>
-                    <div className='w-[100%] mt-5'>{project.description}</div>
+                    <div className='w-[100%] mt-5'>{project.description ? description.map((para, i) => (
+                        <p key={i} className='mt-4'>{para}</p>
+                    )) : ''}</div>
                     <div className='w-fit flex my-3'>{
                         project.githublink ?
                             <a href={project.githublink} target='_blank' className='bg-highlight p-1 rounded-lg flex w-fit items-center gap-1 mx-1'>
